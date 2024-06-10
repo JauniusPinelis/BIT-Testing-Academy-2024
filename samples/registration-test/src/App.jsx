@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
-import RegistrationForm from './RegistrationForm';
+import ContactForm from './ContactForm';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <RegistrationForm />
+        <ContactForm />
       </header>
     </div>
   );
