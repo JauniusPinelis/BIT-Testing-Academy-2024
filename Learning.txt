@@ -1,0 +1,24 @@
+
+What we need to learn:
+ Manual testing experience using desktop computers and mobile devices.
+ Ability to create basic testing documentation.
+
+ Experience with testing APIs
+ Working knowledge of relational databases and/or NOSQL
+ Experience working with SQL;
+
+QA automation
+Experience with UI automation testing;
+
+Knowledge and working experience of Agile SDLC (Software Delivery Life Cycle).
+Understanding of the software development lifecycle.
+Experience with bug-tracking systems (JIRA).
+
+Experience with CI/CD tools like Jenkins.
+
+What we need to learn:
+ - Manual testing
+ - Software development process (Agile/Scrum/Jira)
+ - Types of systems and types of testing.
+ - API Testing Basics
+ - SQL Database basics

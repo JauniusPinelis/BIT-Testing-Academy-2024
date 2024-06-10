@@ -1,0 +1,1 @@
+We will learn to launch a React FE web application.
