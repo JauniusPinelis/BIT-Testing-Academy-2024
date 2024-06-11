@@ -5,7 +5,7 @@ The homework is to learn about back-end systems.
 
 Most front-end system interact with back-end systems through REST API and json.
 
-1. What is a REST API?
+1. What is a API? what is a rest api?
 2. What is json?
 3. Why do we separate Front-end and back-end systems?
 4. How do you test REST API? Why is browser not enough.
