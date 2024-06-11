@@ -1,0 +1,21 @@
+On load:
+    1. Is the grid empty?
+    2. Does player O start the game?
+    3. Does 'go to game start' button is displayed?`
+
+On click functionality:
+    When initial move happens:
+    1. 'X' should be displayed on clicked cell.
+    2. Next player label changes to 'Next player O'
+    3. 'Go to move number 1'
+
+'Reset or go back' functionality:
+
+'Winner determination algorithm':
+    
+
+'Post game actions': 
+
+
+
+

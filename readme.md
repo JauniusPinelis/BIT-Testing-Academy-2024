@@ -7,4 +7,7 @@ Day 1:
  - Frontend and Backend (Web)
  - WEB FE testing
 
+Day 2: 
+ - Functional testing.
+
 

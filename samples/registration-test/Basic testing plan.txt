@@ -1,0 +1,5 @@
+We need to test 2 scenarios:
+ 1. Form input.
+    1.1. User able to enter information.
+    1.2. Validation works as expected.
+ 2. Information display.
