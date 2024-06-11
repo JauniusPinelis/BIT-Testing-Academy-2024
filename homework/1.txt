@@ -1,1 +1,8 @@
 We will learn to launch a React FE web application.
+
+1. Download an react application from 
+https://github.com/JauniusPinelis/BIT-Testing-Academy-2024/tree/main/samples/registration-test
+and run it locally.
+
+2. Imagine you are a manual tester. And you need to perform  manual 'functional testing' on this 'application'.
+Research 'functional testing' and write down some test cases (in english).
