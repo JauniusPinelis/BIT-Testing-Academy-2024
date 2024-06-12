@@ -10,4 +10,8 @@ Day 1:
 Day 2: 
  - Functional testing.
 
+Day 3:
+ - REST API
+ - Postman
+
 
