@@ -1,0 +1,11 @@
+You have an REST api (todos) located in 
+https://github.com/JauniusPinelis/BIT-Testing-Academy-2024/tree/main/samples/api-example
+
+1. Copy and run this code locally.
+'npm install' and 'npm run dev' should do the job.
+2. Install Postman.
+3. REgister and Login to Postman.
+4. Create a collection with GET and CREATE (Post) applications. Test them, make sure their work.
+
+Additional, Advanced:
+The REST API also has PUT, Delete endpoints. Create requests to test them also.
