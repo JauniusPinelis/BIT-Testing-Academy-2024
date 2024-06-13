@@ -26,7 +26,7 @@ app.post('/api/todos', (req, res) => {
 app.put('/api/todos/:id', (req, res) => {
     const id = req.params.id;
     const updatedTodo = req.body;
-    let index = todos.findIndex(todo => todo.id === id);
+    let index = todos.findIndex(todo => todo.id == id);
 
     if (index !== -1) {
         todos[index] = updatedTodo;
@@ -39,7 +39,7 @@ app.put('/api/todos/:id', (req, res) => {
 // Delete a todo
 app.delete('/api/todos/:id', (req, res) => {
     const id = req.params.id;
-    const index = todos.findIndex(todo => todo.id === id);
+    const index = todos.findIndex(todo => todo.id == id);
 
     if (index !== -1) {
         const deletedTodo = todos.splice(index, 1);

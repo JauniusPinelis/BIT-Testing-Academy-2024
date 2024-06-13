@@ -14,4 +14,8 @@ Day 3:
  - REST API
  - Postman
 
+Day 4:
+ - REST API: delete and PUT
+ - Postman basics continued
+
 
