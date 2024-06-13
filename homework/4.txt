@@ -1,5 +1,5 @@
 1. 
-Create an node.js express application with CHATGPT for CRUD.
+Create an node.js express REST api application with CHATGPT for CRUD.
 This CRUD should be for shopItems. ShopItem should have id, name and a price.
 
 2. 
