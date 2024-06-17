@@ -1,0 +1,18 @@
+We have two tools for testing REST apis:
+1. Swagger https://petstore.swagger.io/
+Please do some research on that.
+2. Postman
+
+What are the differences between them, similarities?
+why both are used?
+
+2. Try importing https://petstore.swagger.io/ into postman.
+Try testing it out as well.
+
+3. Try reading and the 'RESTFUL' of openai documentation:
+https://platform.openai.com/docs/api-reference/introduction
+I will ask the following questions:
+ 1. What resousrces does this api have?
+ 2. What is the url for image resources.
+ 3. What does creating a Thread require? What status code can it return?
+

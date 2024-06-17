@@ -18,4 +18,10 @@ Day 4:
  - REST API: delete and PUT
  - Postman basics continued
 
+Week 2:
+
+Day 1:
+ - Real life REST apis.
+ - Swagger/OpenAPI.
+
 

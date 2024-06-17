@@ -1,0 +1,174 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "ShopItems API",
+        "version": "1.0.0",
+        "description": "API for managing shop items"
+    },
+    "servers": [
+        {
+            "url": "http://localhost:3000",
+            "description": "Local server"
+        }
+    ],
+    "components": {
+        "schemas": {
+            "ShopItem": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "example": 1
+                    },
+                    "name": {
+                        "type": "string",
+                        "example": "Apple"
+                    },
+                    "price": {
+                        "type": "number",
+                        "example": 1.5
+                    }
+                }
+            }
+        }
+    },
+    "paths": {
+        "/shopItems": {
+            "get": {
+                "summary": "Get all shop items",
+                "responses": {
+                    "200": {
+                        "description": "List of shop items",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/ShopItem"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "summary": "Create a new shop item",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ShopItem"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "201": {
+                        "description": "Shop item created",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ShopItem"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/shopItems/{id}": {
+            "get": {
+                "summary": "Get a shop item by ID",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        },
+                        "description": "ID of the shop item"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Shop item found",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ShopItem"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Shop item not found"
+                    }
+                }
+            },
+            "put": {
+                "summary": "Update a shop item by ID",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        },
+                        "description": "ID of the shop item"
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ShopItem"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "Shop item updated",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ShopItem"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Shop item not found"
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Delete a shop item by ID",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        },
+                        "description": "ID of the shop item"
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "Shop item deleted"
+                    },
+                    "404": {
+                        "description": "Shop item not found"
+                    }
+                }
+            }
+        }
+    }
+}
