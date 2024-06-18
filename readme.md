@@ -24,4 +24,7 @@ Day 1:
  - Real life REST apis.
  - Swagger/OpenAPI.
 
+Day 2:
+ - Understanding Openai api documentation.
+ - Intro to databases.
 

@@ -1,0 +1,20 @@
+In this homework we will practice SQL:
+When generating SQL, you can use ChatGPT, but be able to explain every single keyword.
+
+0. Create a new database for shopItems.
+
+1. Please create SQL schema for ShopItems and Shops. 
+ShopItem should have Name, price, quantity.
+Shop should have name, address.
+
+There are some fields which i have not mentioned (primary, foreign key) ,that maybe should be created.
+
+2. Populate ShopItems and SHops with some dummy data. 
+(Insert scripts)
+
+3. 
+Write some SQL queries:
+    1. Get the name of a shop that has the most expensive item.
+    (Select)
+    2. List the names of shops and how many items each shops has.
+    (Select + group by)
