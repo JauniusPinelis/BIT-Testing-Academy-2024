@@ -1,0 +1,13 @@
+Please create a database for a banking system.
+
+You will have some business requirements, please create Postgre Schema for the following functionalities:
+
+1. User can send money from one account to another.
+2. You should be able to view all transactions of the user.
+
+ChatGPT can help you.
+
+Please produce the schemas and the following queries:
+
+1. Display how much money each user has in each account.
+2. Display how many transactions has been made by a user in the last week given the user id.
