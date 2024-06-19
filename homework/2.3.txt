@@ -11,3 +11,5 @@ Please produce the schemas and the following queries:
 
 1. Display how much money each user has in each account.
 2. Display how many transactions has been made by a user in the last week given the user id.
+
+Please add some sensible information (user should have name)
