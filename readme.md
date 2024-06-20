@@ -32,3 +32,6 @@ Day 3:
  - SQL continued
  - Selects, Joins
 
+Day 4:
+ - SQL Select practice
+

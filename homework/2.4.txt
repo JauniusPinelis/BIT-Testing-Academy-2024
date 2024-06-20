@@ -1,0 +1,79 @@
+We have new SQL Schema:
+
+CREATE TABLE schools (
+    school_id SERIAL PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    address VARCHAR(255),
+    city VARCHAR(100),
+    state VARCHAR(100),
+    zip_code VARCHAR(10)
+);
+
+CREATE TABLE students (
+    student_id SERIAL PRIMARY KEY,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    date_of_birth DATE,
+    school_id INT REFERENCES schools(school_id)
+);
+
+CREATE TABLE subjects (
+    subject_id SERIAL PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    description TEXT
+);
+
+CREATE TABLE grades (
+    grade_id SERIAL PRIMARY KEY,
+    student_id INT REFERENCES students(student_id),
+    subject_id INT REFERENCES subjects(subject_id),
+    grade CHAR(2),
+    grade_date DATE
+);
+
+INSERT INTO schools (name, address, city, state, zip_code) VALUES
+('Greenwood High School', '123 Elm St', 'Greenwood', 'NY', '10001'),
+('Riverdale High School', '456 Oak St', 'Riverdale', 'CA', '90210');
+
+INSERT INTO students (first_name, last_name, date_of_birth, school_id) VALUES
+('John', 'Doe', '2005-05-15', 1),
+('Jane', 'Smith', '2006-07-20', 1),
+('Mike', 'Johnson', '2004-09-10', 2),
+('Emily', 'Davis', '2005-12-30', 2);
+
+INSERT INTO subjects (name, description) VALUES
+('Mathematics', 'The study of numbers, shapes, and patterns.'),
+('English', 'The study of the English language and literature.'),
+('Science', 'The study of the natural world.'),
+('History', 'The study of past events.');
+
+INSERT INTO grades (student_id, subject_id, grade, grade_date) VALUES
+(1, 1, 'A', '2022-05-20'),
+(1, 2, 'B', '2022-05-21'),
+(2, 1, 'A-', '2022-05-22'),
+(2, 3, 'B+', '2022-05-23'),
+(3, 4, 'B', '2022-05-24'),
+(4, 2, 'A', '2022-05-25');
+
+-- I want to see all subjects name and grade in there
+
+select s.name, g.grade from subjects s
+join grades g on g.subject_id = s.subject_id
+order by s.name
+
+-- Get all student name who dont have any grades
+select * from students s
+	where s.student_id not in (
+select distinct student_id from grades)
+
+
+-- Get the student name which has the latest grade
+select students.first_name   from students
+join grades on grades.student_id = students.student_id
+order by grades.grade_date desc
+limit 1
+
+Write the following queries without CHATGPT:
+1. List all schools and students associated with that. (Use join)
+2. List schools which have no students (use not in)
+3. List the students name who has the lowest grade.
