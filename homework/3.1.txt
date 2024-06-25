@@ -1,0 +1,15 @@
+Chrome Developer tools
+Internet explorer developer tools
+
+Please get familiar with the following functionalities:
+
+1. Elements -> Why is Elements need in Developer tools?
+2. Console -> Why Console is useful for testing?
+3. Why Network is useful for security testing?
+4. How can i emulate a different device on Developer tools?
+
+5. Please inspect Sources, Performance as well.
+
+
+
+

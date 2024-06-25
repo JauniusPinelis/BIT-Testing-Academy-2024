@@ -1,0 +1,39 @@
+Testing roles:
+Quality Assurance engineer (QA) vs Tester
+
+Levels:
+1. Manual Tester
+2. Manual Tester with domain knowledge.
+-> Product owner
+3. Manual tester who is able to create a manual testing framework.
+4. Manual tester (with domain and plan) 
+who can dedicate works (lead) to others.
+5. Quality Assurance engineer who is able to write automated tests.
+6. Quality Assurance engineer who is able 
+    to setup automated test framework.
+
+Software development methodologies:
+Waterfall
+Agile
+SCRUM
+
+Testing types
+
+Regression testing
+Smoke testing
+Sanity testing
+
+Functional testing: whether each application feature works as per the software requirements.
+    User acceptance testing
+Non-functional testing:
+    UI testing
+    Compatibility testing
+    Security testing
+    Load/Stress Testing
+    Performance testing
+
+
+Deployments
+weekly vs daily.
+For manual testing, a testing environment must be provided.
+

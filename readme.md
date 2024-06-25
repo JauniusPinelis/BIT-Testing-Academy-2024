@@ -35,3 +35,8 @@ Day 3:
 Day 4:
  - SQL Select practice
 
+Week 3:
+
+Day 1:
+    Testing concepts.
+
