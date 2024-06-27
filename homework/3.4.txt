@@ -1,0 +1,9 @@
+You have a working cypress example in samples/registration-cypress
+
+There is already some working Cypress test code in there with a registration sample.
+
+1. Try copying and launching the application and cypress.
+2. Cover the registration functionality full with Cypress tests.
+
+The project is there:
+https://github.com/JauniusPinelis/BIT-Testing-Academy-2024/tree/main/samples/registration-cypress
