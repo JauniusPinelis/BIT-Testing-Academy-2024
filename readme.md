@@ -39,4 +39,12 @@ Week 3:
 
 Day 1:
     Testing concepts.
+    Chrome developer tools.
+
+Day 2:
+    Testing plan.
+
+Day 3:
+    Intro to automated FE automated testing.
+    Intro to Cypress
 
