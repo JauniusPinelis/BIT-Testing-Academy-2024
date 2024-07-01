@@ -1,0 +1,10 @@
+There is a website to practice test-automation:
+https://commitquality.com/
+
+The website contains 2 main pages:
+ - Product list (https://commitquality.com/)
+ - Product add (https://commitquality.com/add-product)
+
+0. Think and plan, what tests are u going to write.
+Create a list for these test cases.
+1. implement these test cases with automated FE tests using cypress
