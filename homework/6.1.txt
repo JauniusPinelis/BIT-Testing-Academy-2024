@@ -1,0 +1,24 @@
+You have an application with the following endpoints:
+
+// Shop routes
+router.get('/shops', getShops);
+router.get('/shops/:id', getShopById);
+router.post('/shops', createShop);
+router.put('/shops/:id', updateShop);
+router.delete('/shops/:id', deleteShop);
+
+// ShopItem routes
+router.get('/shopitems', getShopItems);
+router.get('/shopitems/:id', getShopItemById);
+router.post('/shopitems', createShopItem);
+router.put('/shopitems/:id', updateShopItem);
+router.delete('/shopitems/:id', deleteShopItem);
+
+The code is in the https://github.com/JauniusPinelis/BIT-Testing-Academy-2024/tree/main/samples/rest-postgre
+The code is not complex and u are able to view it (white-box testing).
+
+Requirements:
+0. Launch rest-postgre application locally.
+1. Create a postman collection to cover these endpoints.
+2. Be able to verify that the data (shops or shopitems) has been created/modified/deleted using database (pgadmin4) 
+and GET calls
