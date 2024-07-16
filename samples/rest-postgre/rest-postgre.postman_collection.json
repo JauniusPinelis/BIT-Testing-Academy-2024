@@ -1,0 +1,162 @@
+{
+	"info": {
+		"_postman_id": "67279077-3a00-4bbf-bf38-77eb43675ca5",
+		"name": "rest-postgre",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7556965"
+	},
+	"item": [
+		{
+			"name": "Get Shops",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response is a non-empty array\", function () {\r",
+							"    const responseBody = pm.response.json();  // Parse the JSON response body\r",
+							"\r",
+							"    pm.expect(responseBody).to.be.an('array');  // Check if response is an array\r",
+							"    pm.expect(responseBody).to.have.length.above(0);  // Check if array is not empty\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/shops",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"shops"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Shop By Id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Test that status code is 200\r",
+							"pm.test(\"status code is 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"// Test that the data is an object and has correct data\r",
+							"pm.test(\"the data is an object and has correct data\", () => {\r",
+							"    let jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData).to.be.an('object');\r",
+							"    pm.expect(jsonData.id).to.eql(2);\r",
+							"    pm.expect(jsonData.name).to.eql(\"Maxima\");\r",
+							"    pm.expect(jsonData.address).to.eql(\"Mindaugo g.\");\r",
+							"});\r",
+							"\r",
+							"// Test that response time is under 500ms\r",
+							"pm.test(\"response is under 500ms\", () => {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/shops/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"shops",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Shop",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Test that status code is 200\r",
+							"pm.test(\"status code is 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"// Test that response time is under 300ms\r",
+							"pm.test(\"response is under 300ms\", () => {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(300);\r",
+							"});\r",
+							"\r",
+							"// Test that the returned data is an object and is correct\r",
+							"pm.test(\"returned data is an object and is correct\", () => {\r",
+							"    let jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData).to.be.an('object');\r",
+							"    pm.expect(jsonData.id).to.eql(3);\r",
+							"    pm.expect(jsonData.name).to.eql('Maxima');\r",
+							"    pm.expect(jsonData.address).to.eql('Mindaugo g.');\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Maxima\",\r\n    \"address\": \"Mindaugo g.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/shops",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"shops"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

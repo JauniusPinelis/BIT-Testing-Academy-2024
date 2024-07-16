@@ -11,6 +11,7 @@ const getShops = async (req, res) => {
 };
 
 const getShopById = async (req, res) => {
+
     const { id } = req.params;
     try {
         const result = await pool.query('SELECT * FROM shops WHERE id = $1', [id]);
