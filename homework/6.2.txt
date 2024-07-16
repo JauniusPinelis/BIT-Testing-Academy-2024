@@ -1,0 +1,5 @@
+Please cover the postman collection that you have created in previous homework
+with automated tests (scripts -> post-res).
+
+An example is in:
+https://github.com/JauniusPinelis/BIT-Testing-Academy-2024/blob/main/samples/rest-postgre/rest-postgre.postman_collection.json
