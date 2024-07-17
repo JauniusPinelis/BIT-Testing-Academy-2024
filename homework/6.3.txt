@@ -1,0 +1,5 @@
+Build testing scenarios on previous exercise:
+
+1. Create Shop.
+2. Create and Delete Shop
+3. Create and Delete ShopItem.

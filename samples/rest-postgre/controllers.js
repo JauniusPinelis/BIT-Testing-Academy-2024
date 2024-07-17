@@ -15,6 +15,8 @@ const getShopById = async (req, res) => {
     const { id } = req.params;
     try {
         const result = await pool.query('SELECT * FROM shops WHERE id = $1', [id]);
+        // if (result.rows.length == 0)
+        //     res.status(404);
         res.json(result.rows[0]);
     } catch (err) {
         res.status(500).json({ error: err.message });
@@ -26,6 +28,7 @@ const createShop = async (req, res) => {
     try {
         const result = await pool.query('INSERT INTO shops (name, address) VALUES ($1, $2) RETURNING *', [name, address]);
         res.json(result.rows[0]);
+        // res.json({ id: 3, ...req.body })
     } catch (err) {
         res.status(500).json({ error: err.message });
     }

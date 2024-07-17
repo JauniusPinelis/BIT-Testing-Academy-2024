@@ -48,3 +48,14 @@ Day 3:
     Intro to automated FE automated testing.
     Intro to Cypress
 
+Week 6:
+
+Day 1: 
+    Postman recap. Intro to Postman tests.
+
+Day 2:
+
+
+Day 3: 
+    REST user scenario tests.
+

@@ -7,6 +7,184 @@
 	},
 	"item": [
 		{
+			"name": "Create Shop scenario",
+			"item": [
+				{
+					"name": "Create Shop",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"let jsonData = pm.response.json();\r",
+									"let id = jsonData.id;\r",
+									"\r",
+									"let requestJsonData = pm.request.body.raw;\r",
+									"\r",
+									"let requestData = JSON.parse(requestJsonData);\r",
+									"// Set the collection variable\r",
+									"\r",
+									"pm.collectionVariables.set(\"createdShopId\", id);\r",
+									"pm.collectionVariables.set(\"name\", requestData.name);\r",
+									"pm.collectionVariables.set(\"address\", requestData.address);\r",
+									"\r",
+									"// Test that status code is 200\r",
+									"pm.test(\"status code is 200\", () => {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"// Test that response time is under 300ms\r",
+									"pm.test(\"response is under 300ms\", () => {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(300);\r",
+									"});\r",
+									"\r",
+									"// Test that the returned data is an object and is correct\r",
+									"pm.test(\"returned data is an object and is correct\", () => {\r",
+									"    let jsonData = pm.response.json();\r",
+									"    console.log(jsonData)\r",
+									"    pm.expect(jsonData).to.be.an('object');\r",
+									"    // pm.expect(jsonData.id).to.eql(3);\r",
+									"    pm.expect(jsonData.name).to.eql(requestData.name);\r",
+									"    pm.expect(jsonData.address).to.eql(requestData.address);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Ieva shop\",\r\n    \"address\": \"Mindaugo g.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/shops",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"shops"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Shops (Check shop exists)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response is a non-empty array\", function () {\r",
+									"    const responseBody = pm.response.json();  // Parse the JSON response body\r",
+									"\r",
+									"    pm.expect(responseBody).to.be.an('array');  // Check if response is an array\r",
+									"    pm.expect(responseBody).to.have.length.above(0);  // Check if array is not empty\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response array contains created shop\", () => {\r",
+									"    const responseBody = pm.response.json();\r",
+									"    let nameExists = responseBody.some(shop => shop.name === pm.collectionVariables.get(\"name\"));\r",
+									"    \r",
+									"    // Assert that the name exists\r",
+									"    pm.expect(nameExists).to.be.true;\r",
+									"})"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/shops",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"shops"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Shop By Id (Check the created shop exists)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Test that status code is 200\r",
+									"pm.test(\"status code is 200\", () => {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"// Test that the data is an object and has correct data\r",
+									"pm.test(\"the data is an object and has correct data\", () => {\r",
+									"    let jsonData = pm.response.json();\r",
+									"    console.log(pm.collectionVariables);\r",
+									"    pm.expect(jsonData).to.be.an('object');\r",
+									"    pm.expect(jsonData.id).to.eql(pm.collectionVariables.get(\"createdShopId\"));\r",
+									"    pm.expect(jsonData.name).to.eql(pm.collectionVariables.get(\"name\"));\r",
+									"    pm.expect(jsonData.address).to.eql(pm.collectionVariables.get(\"address\"));\r",
+									"});\r",
+									"\r",
+									"// Test that response time is under 500ms\r",
+									"pm.test(\"response is under 500ms\", () => {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/shops/{{createdShopId}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"shops",
+								"{{createdShopId}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "Get Shops",
 			"event": [
 				{
@@ -84,7 +262,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3000/api/shops/2",
+					"raw": "http://localhost:3000/api/shops/520",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -93,7 +271,7 @@
 					"path": [
 						"api",
 						"shops",
-						"2"
+						"520"
 					]
 				}
 			},
@@ -120,7 +298,7 @@
 							"pm.test(\"returned data is an object and is correct\", () => {\r",
 							"    let jsonData = pm.response.json();\r",
 							"    pm.expect(jsonData).to.be.an('object');\r",
-							"    pm.expect(jsonData.id).to.eql(3);\r",
+							"    // pm.expect(jsonData.id).to.eql(3);\r",
 							"    pm.expect(jsonData.name).to.eql('Maxima');\r",
 							"    pm.expect(jsonData.address).to.eql('Mindaugo g.');\r",
 							"});\r",
@@ -136,7 +314,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"Maxima\",\r\n    \"address\": \"Mindaugo g.\"\r\n}",
+					"raw": "{\r\n    \"name\": 324344334,\r\n    \"address\": 23323244\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -157,6 +335,41 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Delete Shop",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/shops/500",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"shops",
+						"500"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "createdShopId",
+			"value": ""
+		},
+		{
+			"key": "name",
+			"value": ""
+		},
+		{
+			"key": "address",
+			"value": ""
 		}
 	]
 }
