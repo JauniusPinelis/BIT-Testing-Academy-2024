@@ -59,3 +59,17 @@ Day 2:
 Day 3: 
     REST user scenario tests.
 
+Day 3: 
+    Postman scenarios practice
+
+Week 7:
+
+Day 1:
+    Javascript recap on functions and OOP
+
+Day 2:
+    Understanding Javascript code in tests
+
+Day 3: 
+    Data, array and list functions.
+

@@ -27,7 +27,8 @@ const createShop = async (req, res) => {
     const { name, address } = req.body;
     try {
         const result = await pool.query('INSERT INTO shops (name, address) VALUES ($1, $2) RETURNING *', [name, address]);
-        res.json(result.rows[0]);
+        // // res.json(result.rows[0]);
+        res.status(204).json({})
         // res.json({ id: 3, ...req.body })
     } catch (err) {
         res.status(500).json({ error: err.message });
@@ -79,7 +80,8 @@ const createShopItem = async (req, res) => {
     const { name, price, shopId } = req.body;
     try {
         const result = await pool.query('INSERT INTO shop_items (name, price, shop_id) VALUES ($1, $2, $3) RETURNING *', [name, price, shopId]);
-        res.json(result.rows[0]);
+        // res.json(result.rows[0]);
+        res.status(204)
     } catch (err) {
         res.status(500).json({ error: err.message });
     }
