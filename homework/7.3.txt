@@ -1,0 +1,14 @@
+Today we have revised javascript, arrays and objects.
+
+You will write some javascript code (in vscode) into practice.js
+
+You have data in 7.3.js
+
+Write the following scenarios using the arrow functions (=>) or for, foreach loops.
+
+1. print all users who have id which is more than 1.
+2. print the object of the first user who has email 'Nathan@yesenia.net'
+3. Print true if there is a user with a username which is longer than 10 characters.
+4. Print address object of a user who has id 4
+5. Print all users who have longitude larger than latitude
+6. Print all name and zipcodes in a table format for all users.
