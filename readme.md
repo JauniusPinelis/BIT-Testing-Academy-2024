@@ -73,3 +73,8 @@ Day 2:
 Day 3: 
     Data, array and list functions.
 
+Day 4:
+    REST api recap
+    Postman AI
+    practice on writing Postman tests.
+

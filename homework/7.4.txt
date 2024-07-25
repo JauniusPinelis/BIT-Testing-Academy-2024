@@ -1,0 +1,10 @@
+You got introduced to new REST api https://reqres.in/
+
+Please remember that this is FAKE data api.
+CREATES, UPDATES, DELETES will not alter any records.
+
+Please write automated postman tests for the following endpoints:
+1. /Register
+2. /Login
+These endpoints return 'access token', please research what this is.
+3. users/{id}/update
