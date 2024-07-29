@@ -1,0 +1,26 @@
+You have code from https://github.com/bezkoder/node-js-jwt-authentication-postgresql 
+which implements Authentication and Authorization with Node.js and Postgre.
+
+You have the following tasks.
+
+1. Clone the repository into your local.
+2. Install npm packages, add 'npm run dev' script, change database configuration.
+3. Create the database and run the sql script.
+
+INSERT INTO public.roles (id, name, "createdAt", "updatedAt")
+VALUES 
+(1, 'user', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+(2, 'moderator', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+(3, 'admin', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)
+
+If the launching fails you need to comment out the following:
+db.sequelize.sync({ force: true }).then(() => {
+  console.log('Drop and Resync Database with { force: true }');
+  initial();
+});
+
+
+Postman tasks:
+1. By analyzing the readme in https://github.com/bezkoder/node-js-jwt-authentication-postgresql or checking the code.
+Create Tests in Postman.
+2. Create test for authentication and authorization.

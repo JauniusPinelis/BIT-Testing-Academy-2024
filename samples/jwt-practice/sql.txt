@@ -1,0 +1,5 @@
+INSERT INTO public.roles (id, name, "createdAt", "updatedAt")
+VALUES 
+(1, 'user', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+(2, 'moderator', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+(3, 'admin', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)
