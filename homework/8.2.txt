@@ -1,0 +1,5 @@
+Update the previous homework with what u have learned today.
+
+1. Add extra requests and tests for unsuccessful.
+2. Add successful flow for registration, authentication and resource access. This should be rerunable.
+3. Please cover this successful flow with automated tests.

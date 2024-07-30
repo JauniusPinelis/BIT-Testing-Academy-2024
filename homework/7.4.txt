@@ -13,3 +13,21 @@ Extra:
 Update 6.3 homework with new test scenario for update.
 Please check that PUT works as expected. In details, perform PUT 
 and then GET and ensure that the data has been modified correctly.
+
+// Token is json
+
+"{
+
+}"
+
+// json has property token
+
+{
+    "response": 3
+}
+
+// property 'token' of a json is a string
+
+{
+    "token": ""
+}
