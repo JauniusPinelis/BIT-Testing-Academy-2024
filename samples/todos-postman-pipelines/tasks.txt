@@ -1,0 +1,27 @@
+A good example what we try to achieve is in 
+https://github.com/JauniusPinelis/postman-testing-pipelines
+
+Create a new github repository for this project.
+
+Please do the following tasks.
+
+1. You have application code in server.js
+Create package.json with the needed dependencies.
+
+2. Launch the application locally successfully.
+
+3. Create a postman collection (no tests yet) where you perform CREATE, UPDATE, GET, GET by id, Delete.
+Add your Postman collection to Github.
+
+4. Cover the functionalities with postman tests.
+
+5. Ensure that your tests are rerunnable. You can run postman collection several times.
+
+6. Look at your tests quality, does changing application break your tests.
+
+7. Run your tests with Newman package (have a command in package.json that does that).
+
+8. Setup Github Action pipeline which runs the tests for you.
+Copy and changing the url of https://github.com/JauniusPinelis/postman-testing-pipelines/blob/main/.github/workflows/main.yml
+should do the job.
+The tests should run when change is pushed to 'main'
