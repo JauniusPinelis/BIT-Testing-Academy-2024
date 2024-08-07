@@ -25,3 +25,10 @@ Add your Postman collection to Github.
 Copy and changing the url of https://github.com/JauniusPinelis/postman-testing-pipelines/blob/main/.github/workflows/main.yml
 should do the job.
 The tests should run when change is pushed to 'main'
+
+Extra, optional:
+1. Well formatted readme which explain whats the project is about, explains testings and how to launch everything.
+2. Update pipelines:
+    HTML report is produced even though you have failing tests. Currently the html pipeline does not run if the test have failed.
+3. Lets say your application uses the Postgre database, 
+    what would you do if you would need those pipelines running.

@@ -1,0 +1,16 @@
+We have an example of cypress running local application with pipelines in here:
+https://github.com/JauniusPinelis/cypress-pipelines
+
+You will perform automated cypress tests on website:
+https://qa-practice.netlify.app/products_list
+
+You only need to test 'Shopping cart functionality'
+
+1. Please create a new Github repo for this project, it should be public.
+2. Please create testing-scenarios.txt where you describe all the testing cases.
+3. Setup initial package.json for running cypress tests and initialize cypress testing.
+4. Cover the 'Shopping cart functionality' with Automated Cypress tests.
+5. Review the quality, naming, structure of the tests. Maybe you need to write some commands 
+    (commands in cypress).
+6. Setup pipelines for cypress tests. They should run, when you commit new tests 
+    or you should be able to run the manually.
