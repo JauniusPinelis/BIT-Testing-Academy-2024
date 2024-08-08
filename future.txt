@@ -1,0 +1,31 @@
+CV:
+1. Should be in English.
+2. CV should be reviewable, not readable.
+3. Portfolio should be the base of the CV.
+4. Your CV should be unique, but not too flashy.
+5. Include BIT degree in your education 
+    and explain what has been taught.
+6. LinkedIn should match your CV and Linkedin is becoming CV.
+LInkedin top summary should have urls to your portfolio.
+
+Portfolio:
+1. Should consist of 3-4 projects.
+2 Possible examples of QA portfolio would be:
+    1. Local REST api code covered 
+        with Postman automated tests (with CI).
+    2. Public website automated testing with Cypress.
+    3. Database Schema creation and data seeding using Postgre. 
+    (or maybe testing manully an app that uses postgre)
+    4. Load testing with Postman or Jmeter.
+3. CV should have a separate section for 
+Portfolio with urls, descriptions and technologies.
+
+Interviews:
+1. Home-task.
+2. Interview does involve explain, 
+    analysing, modifying home-task.
+3. Interviews are to ensure that the person is able to do the job 
+    and is pleasant to work with.
+4. Sometimes these interviews are in English.
+
+
