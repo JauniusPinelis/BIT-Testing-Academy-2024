@@ -28,4 +28,25 @@ Interviews:
     and is pleasant to work with.
 4. Sometimes these interviews are in English.
 
+Detailed plan:
+1. Understanding of JSON, Javascript, FE, BE, REST, API, System Integration, Authorization, Authentication.
+Research the following keywords: Docker(complex, mini virtual machines), microservices, API and REST Api.
+
+https://github.com/BMayhew/awesome-sites-to-test-on
+
+2. Javascript basics:
+    Variables, Array, objects, list manipulation, functions, classes.
+
+https://www.youtube.com/@RaghavPal/featured
+
+3. Cypress, Postman.
+https://docs.cypress.io/guides/references/best-practices
+https://docs.cypress.io/api/cypress-api/custom-commands
+
+If you like try, Playwright (cypress alternative)
+If you have extra time -> JMeter (load testing)
+For Mobile application testing -> Appium
+
+Optional courses:
+https://www.udemy.com/course/cypress-tutorial/
 
