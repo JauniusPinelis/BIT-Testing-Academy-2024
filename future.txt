@@ -43,6 +43,20 @@ https://www.youtube.com/@RaghavPal/featured
 https://docs.cypress.io/guides/references/best-practices
 https://docs.cypress.io/api/cypress-api/custom-commands
 
+Postman:
+Environments: https://learning.postman.com/docs/sending-requests/variables/managing-environments/
+Authentication with Postman, (Oauth2 basics).
+REST concepts: JSON, Request Body and Response Body, How do i send information with GET, Delete (through url),
+    Status codes? 500 vs 200, why it matters.
+    Database and Api are not the same
+Understanding Postman variables, environments, scripts, pre-scripts.
+
+Database: 
+Postgre vs PgAdmin4. Why we need a database? What is index, schema, data, foreign key (constraint)?
+What is data seeding?
+https://www.youtube.com/watch?v=SpfIwlAYaKk
+
+
 If you like try, Playwright (cypress alternative)
 If you have extra time -> JMeter (load testing)
 For Mobile application testing -> Appium
